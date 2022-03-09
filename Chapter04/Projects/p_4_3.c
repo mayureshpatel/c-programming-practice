@@ -11,3 +11,17 @@
  * number without using arithmetic to split the number into digits.
  * Hint: see te upc.c program of section 4.1
  */
+#include <stdio.h>
+
+int main(void) {
+    int digit1, digit2, digit3;
+    
+    printf("Enter a three-digit number: ");
+    fflush(stdout);
+    
+    scanf("%1d%1d%1d", &digit1, &digit2, &digit3);
+    
+    printf("Reversal of the digits: %d%d%d\n", digit3, digit2, digit1);
+    
+    return 0;
+}
