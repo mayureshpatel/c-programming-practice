@@ -25,3 +25,41 @@
  * NOTE: printf has a way to display octal numbers, which will be discussed
  * later.
  */
+#include <stdio.h>
+
+int main(void) {
+    int userVal, temp, digit1, digit2, digit3, digit4, digit5;
+    
+    printf("Enter any number between 0 and 32767: ");
+    fflush(stdout);
+
+    scanf("%d", &userVal);
+    
+    /*
+     * for each of the possible digits (5) in an octal number between
+     * 0 and 32767, find the remainder of the number, and then divide by
+     * 8. Repeat this process.
+    */
+    // Digit 1
+    digit5 = userVal % 8;
+    temp = userVal / 8;
+
+    // Digit 2
+    digit4 = temp % 8;
+    temp = temp / 8;
+
+    // Digit 3
+    digit3 = temp % 8;
+    temp = temp / 8;
+
+    digit2 = temp % 8;
+    temp = temp / 8;
+
+    // Digit 5
+    digit1 = temp % 8;
+    temp = temp / 8;
+
+    printf("%d%d%d%d%d", digit1, digit2, digit3, digit4, digit5);
+
+    return 0;
+}
