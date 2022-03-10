@@ -32,6 +32,7 @@ int main(void) {
     printf("Enter a 13-digit EAN (#-######-######): ");
     fflush(stdout);
 
+    // Don't forget to put & before the variable name in which to save the value for!!!!
     scanf("%1d-%6d-%6d", &itemType, &manufacturerCode, &productCode);
     printf("itemType: %d\n", itemType);
     printf("manufacturerCode: %d\n", manufacturerCode);
