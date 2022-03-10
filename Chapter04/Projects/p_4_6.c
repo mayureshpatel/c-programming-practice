@@ -32,7 +32,7 @@ int main(void) {
     printf("Enter a 13-digit EAN (#-######-######): ");
     fflush(stdout);
 
-    scanf("%1d-%6d-%6d", itemType, manufacturerCode, productCode);
+    scanf("%1d-%6d-%6d", &itemType, &manufacturerCode, &productCode);
     printf("itemType: %d\n", itemType);
     printf("manufacturerCode: %d\n", manufacturerCode);
     printf("productCode: %d\n", productCode);
