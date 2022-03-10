@@ -7,7 +7,7 @@
  * 
  * @copyright Copyright (c) 2022
  * 
- * Write a program that asks the use rfor a 24h time, then displays the time
+ * Write a program that asks the user for a 24h time, then displays the time
  * in 12h format:
  * 
  *  Input:
@@ -16,3 +16,26 @@
  *  Output:
  *      Equivalent 12h time: 9:11 PM
  */
+#include <stdio.h>
+
+int main(void) {
+    // variables
+    int userHour, userMinute;
+
+    // Get input from the user
+    printf("Enter a 24h time: ");
+    fflush(stdout);
+    scanf("%2d:%2d", &userHour, &userMinute);
+
+    // Calculate the 12 hour time
+    printf("Equivalent 12h time: ");
+    if(userHour > 12) {
+        printf("%d:%d pm\n", (userHour - 12), userMinute);
+    }
+    else {
+        printf("%d:%d am\n", userHour, userMinute);
+    }
+
+    // exit the program
+    return 0;
+}
