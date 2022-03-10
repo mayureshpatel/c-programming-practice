@@ -17,3 +17,15 @@
  *          cents per share for 2000 shares or more). Display the rival's commission
  *          as well as the commission charged by the original broker.
  */
+#include <stdio.h>
+
+int main(void) {
+    // variables
+    int numberOfShares;
+    float pricePerShare, commission;
+
+    
+
+    // exit the program
+    return 0;
+}
