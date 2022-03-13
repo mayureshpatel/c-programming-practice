@@ -24,7 +24,25 @@ int main(void) {
     int numberOfShares;
     float pricePerShare, commission;
 
-    
+    // get user input
+    printf("Enter the price per share: ");
+    fflush(stdout);
+    scanf("%f", &pricePerShare);
+
+    printf("Enter the number of shares: ");
+    fflush(stdout);
+    scanf("%d", &numberOfShares);
+
+    // Calculate the commission
+    if(numberOfShares < 2000) {
+        commission = 33 + (.03 * numberOfShares);
+    }
+    else {
+        commission = 33 + (.02 * numberOfShares);
+    }
+
+    // Print out information
+    printf("Rival broker commission: %.2f", commission);
 
     // exit the program
     return 0;
