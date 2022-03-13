@@ -50,7 +50,7 @@ int main(void) {
         printf("Storm\n");
     }
     else {
-        printf("HUrricane\n");
+        printf("Hurricane\n");
     }
 
     // exit the program
