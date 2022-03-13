@@ -20,3 +20,40 @@
  * Write a program that asks the user to enter the amount of taxable
  * income, then displays the tax due.
  */
+#include <stdio.h>
+
+int main(void) {
+    // Variables
+    float income, incomeTax;
+
+    // Get user input
+    printf("Enter the income for this year: ");
+    fflush(stdout);
+    scanf("%f", &income);
+
+    // Calculate the income tax
+    if(income < 750) {
+        incomeTax = income * .01;
+    }
+    else if(income < 2250) {
+        incomeTax = 7.50 + ((income - 750) * .02);
+    }
+    else if(income < 3750) {
+        incomeTax = 37.50 + ((income - 2250) * .03);
+    }
+    else if(income < 5250) {
+        incomeTax = 82.50 + ((income - 3750) * .04);
+    }
+    else if(income < 7000) {
+        incomeTax = 142.50 + ((income - 5250) * .05);
+    }
+    else {
+        incomeTax = 230.00 + ((income - 7000) * .06);
+    }
+
+    // Print out the results
+    printf("Income Tax: %.2f", incomeTax);
+
+    // exit program
+    return 0;
+}
