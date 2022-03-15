@@ -18,3 +18,17 @@
  * Use as few if statements as possible. Hint: Four if statements are
  * sufficient.
  */
+#include <stdio.h>
+
+int main(void) {
+    // Variables
+    int integer1, integer2, integer3, integer4;
+    int max, min;
+
+    // Get user input
+    printf("Enter four integers: ");
+    fflush(stdout);
+    scanf("%d %d %d %d", &integer1, &integer2, &integer3, &integer4);
+
+    // Find out which ingetgers are the max and min values
+}
