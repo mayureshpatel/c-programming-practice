@@ -31,4 +31,30 @@ int main(void) {
     scanf("%d %d %d %d", &integer1, &integer2, &integer3, &integer4);
 
     // Find out which ingetgers are the max and min values
+    max = integer1;
+    min = integer1;
+    if(integer2 > max) {
+        max = integer2;
+    }
+    else if(integer2 < min) {
+        min = integer2;
+    }
+    
+    if(integer3 > max) {
+        max = integer3;
+    }
+    else if(integer3 < min) {
+        min = integer3;
+    }
+    
+    if(integer4 > max) {
+        max = integer4;
+    }
+    else if(integer4 < min) {
+        min = integer4;
+    }
+
+    // Print the results
+    printf("Max Value: %d\n", max);
+    printf("Min Value: %d", min);
 }
