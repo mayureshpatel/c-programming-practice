@@ -57,4 +57,7 @@ int main(void) {
     // Print the results
     printf("Max Value: %d\n", max);
     printf("Min Value: %d", min);
+
+    // exit the program
+    return 0;
 }
