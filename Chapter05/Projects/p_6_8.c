@@ -36,3 +36,74 @@
  * to 12:47 pm (767 minutes since midnight) than to any of the other departure
  * times.
  */
+#include <stdio.h>
+
+int main(void) {
+    // Variables
+    int userHour, userMin, timeSinceMidnight;
+    int closestDepartureHour, closestDepartureMin;
+    int closestArrivalHour, closestArrivalMin;
+
+    // Get user input for time
+    printf("Enter a 24-hour time: ");
+    fflush(stdout);
+    scanf("%2d:%2d", &userHour, &userMin);
+
+    // Convert input into time expressed since midnight
+    timeSinceMidnight = userHour * 60 + userMin;
+
+    if(timeSinceMidnight < (8 * 60)) {
+        closestDepartureHour = 8;
+        closestDepartureMin = 0;
+        closestArrivalHour = 10;
+        closestArrivalMin = 16;
+    }
+    else if(timeSinceMidnight < (9 * 60 + 43)) {
+        closestDepartureHour = 9;
+        closestDepartureMin = 43;
+        closestArrivalHour = 11;
+        closestArrivalMin = 52;
+    }
+    else if(timeSinceMidnight < (11 * 60 + 19)) {
+        closestDepartureHour = 11;
+        closestDepartureMin = 19;
+        closestArrivalHour = 13;
+        closestArrivalMin = 31;
+    }
+    else if(timeSinceMidnight < (12 * 60 + 47)) {
+        closestDepartureHour = 12;
+        closestDepartureMin = 47;
+        closestArrivalHour = 15;
+        closestArrivalMin = 0;
+    }
+    else if(timeSinceMidnight < (14 * 60)) {
+        closestDepartureHour = 14;
+        closestDepartureMin = 0;
+        closestArrivalHour = 16;
+        closestArrivalMin = 8;
+    }
+    else if(timeSinceMidnight < (15 * 60 + 45)) {
+        closestDepartureHour = 15;
+        closestDepartureMin = 45;
+        closestArrivalHour = 17;
+        closestArrivalMin = 55;
+    }
+    else if(timeSinceMidnight < (19 * 60)) {
+        closestDepartureHour = 19;
+        closestDepartureMin = 0;
+        closestArrivalHour = 20;
+        closestArrivalMin = 20;
+    }
+    else {
+        closestDepartureHour = 20;
+        closestDepartureMin = 45;
+        closestArrivalHour = 23;
+        closestArrivalMin = 58;
+    }
+
+    // Print results
+    printf("Closest Departure at %2d:%2d, Arriving at %2d:%2d", closestDepartureHour, closestDepartureMin, closestArrivalHour, closestArrivalMin);
+
+    // exit the program
+    return 0;
+}
